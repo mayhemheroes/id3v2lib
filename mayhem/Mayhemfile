@@ -1,0 +1,8 @@
+# libFuzzer target: the binary is compiled with -fsanitize=fuzzer. `libfuzzer: true` tells Mayhem to
+# drive it as a libFuzzer harness (engine delivers inputs) — without it Mayhem can't run it (0 edges).
+project: id3v2lib
+target: id3v2lib-fuzz
+
+cmds:
+  - cmd: /mayhem/id3v2lib-fuzz
+    libfuzzer: true
